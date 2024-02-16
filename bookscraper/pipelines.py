@@ -10,6 +10,7 @@ from itemadapter import ItemAdapter
 
 class BookscraperPipeline:
     def process_item(self, item, spider):
+        adapter = ItemAdapter(item)
 
         ## Strip all whitespaces from strings
         field_names = adapter.field_names()
