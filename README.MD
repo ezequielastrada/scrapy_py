@@ -1,6 +1,7 @@
 # PYTHON WEB SCRAPING - SCRAPY
 
 Para inciar el proyecto primero debemos instalar las dependencias
+
 `- pip install -r requirements.txt`
 
 ## COMANDOS PARA EXPORTAR DATOS
