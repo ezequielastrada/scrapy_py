@@ -1,6 +1,6 @@
 # PYTHON WEB SCRAPING - SCRAPY
 
-Este proyecto esta basado en el tutorial de [@josephkearney91](https://github.com/josephkearney91) ([VIDEO EN YT](https://www.youtube.com/watch?v=mBoX_JCKZTE))
+Este proyecto está basado en el tutorial de [@josephkearney91](https://github.com/josephkearney91) ([VIDEO EN YT](https://www.youtube.com/watch?v=mBoX_JCKZTE))
 
 En esta ocacion utilizo Scrapy en python donde he extraido datos de la web [https://books.toscrape.com/](https://books.toscrape.com/)
 
@@ -17,13 +17,28 @@ Temas aprendidos:
 - Scrapy Settings
 - Guardar datos en archivos y bases de datos
 
-## Para inciar el proyecto primero debemos instalar las dependencias
+Para inciar el proyecto primero debemos instalar las dependencias
 
 `pip install -r requirements.txt`
 
+## Comando para ejecutar spiders
 
-## COMANDOS PARA EXPORTAR DATOS
+`scrapy crawl bookspider`
 
+## Comandos para exportar data
+
+### Formato CSV
+
+- Crea o sobrescribe el archivo  
+`scrapy crawl bookspider -O myscrapeddata.csv`
+
+- Crea o agrega al final del arvicho los resultados  
+`scrapy crawl bookspider -o myscrapeddata.csv`
+
+### Formato JSON
+
+- Crea o sobrescribe el archivo  
 `scrapy crawl bookspider -O myscrapeddata.json`
 
-`scrapy crawl bookspider -O myscrapeddata.csv`
+- Crea o agrega al final del arvicho los resultados  
+`scrapy crawl bookspider -o myscrapeddata.json`
