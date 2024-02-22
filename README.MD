@@ -21,6 +21,13 @@ Para inciar el proyecto primero debemos instalar las dependencias
 
 `pip install -r requirements.txt`
 
+## Configurar .env
+
+`POSTGRES_HOST=''`  
+`POSTGRES_USER=''`  
+`POSTGRES_PASSWORD=''`  
+`POSTGRES_DB=''`
+
 ## Comando para ejecutar spiders
 
 `scrapy crawl bookspider`
