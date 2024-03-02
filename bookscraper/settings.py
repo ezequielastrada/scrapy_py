@@ -16,6 +16,7 @@ FEEDS = {
     'booksdata.json': {'format': 'json'}
 }
 
+# USER_AGENT = 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "bookscraper (+http://www.yourdomain.com)"
@@ -69,7 +70,7 @@ ROBOTSTXT_OBEY = True
 
 ITEM_PIPELINES = {
     'bookscraper.pipelines.BookscraperPipeline': 300,
-    'bookscraper.pipelines.SaveToPostgresPipeline': 400,
+#    'bookscraper.pipelines.SaveToPostgresPipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
