@@ -1,6 +1,6 @@
 # PYTHON WEB SCRAPING - SCRAPY
 
-Este proyecto está basado en el tutorial de [@josephkearney91](https://github.com/josephkearney91) ([VIDEO EN YT](https://www.youtube.com/watch?v=mBoX_JCKZTE))
+Este proyecto está basado en el curso para principiantes de [@josephkearney91](https://github.com/josephkearney91) https://thepythonscrapyplaybook.com/freecodecamp-beginner-course/
 
 En esta ocacion utilizo Scrapy en python donde he extraido datos de la web [https://books.toscrape.com/](https://books.toscrape.com/)
 
@@ -16,6 +16,7 @@ Temas aprendidos:
 - Scrapy Middleware
 - Scrapy Settings
 - Guardar datos en archivos y bases de datos
+- Fake User-Agents y Browsers Headers
 
 Para inciar el proyecto primero debemos instalar las dependencias
 
