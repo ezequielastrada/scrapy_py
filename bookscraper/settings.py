@@ -6,6 +6,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+from decouple import config
 
 BOT_NAME = "bookscraper"
 
@@ -15,6 +16,11 @@ NEWSPIDER_MODULE = "bookscraper.spiders"
 FEEDS = {
     'booksdata.json': {'format': 'json'}
 }
+
+SCRAPEOPS_API_KEY = config("API_KEY")
+SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = config("FAKE_USER_AGENT_ENDPOINT")
+SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
+SCRAPEOPS_NUM_RESULTS = 50
 
 # USER_AGENT = 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
 
@@ -55,9 +61,10 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
+DOWNLOADER_MIDDLEWARES = {
 #    "bookscraper.middlewares.BookscraperDownloaderMiddleware": 543,
-#}
+    'bookscraper.middlewares.ScrapeOpsFakeUserAgentMiddleware': 400,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
