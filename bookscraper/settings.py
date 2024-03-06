@@ -20,6 +20,8 @@ FEEDS = {
 SCRAPEOPS_API_KEY = config("API_KEY")
 SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = config("FAKE_USER_AGENT_ENDPOINT")
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
+SCRAPEOPS_FAKE_BROWSER_HEADER_ENDPOINT = config("FAKE_BROWSER_HEADER_ENDPOINT")
+SCRAPEOPS_FAKE_BROWSER_HEADER_ENABLED = True
 SCRAPEOPS_NUM_RESULTS = 50
 
 # USER_AGENT = 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
@@ -63,7 +65,8 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
 #    "bookscraper.middlewares.BookscraperDownloaderMiddleware": 543,
-    'bookscraper.middlewares.ScrapeOpsFakeUserAgentMiddleware': 400,
+#    'bookscraper.middlewares.ScrapeOpsFakeUserAgentMiddleware': 400,
+    'bookscraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware': 400
 }
 
 # Enable or disable extensions
