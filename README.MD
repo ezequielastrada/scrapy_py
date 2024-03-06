@@ -23,10 +23,15 @@ Para inciar el proyecto primero debemos instalar las dependencias
 
 ## Configurar .env
 
+postgre:  
 `POSTGRES_HOST=''`  
 `POSTGRES_USER=''`  
 `POSTGRES_PASSWORD=''`  
 `POSTGRES_DB=''`
+
+scrapeops:  
+`API_KEY=''`  
+`FAKE_USER_AGENT_ENDPOINT=''`
 
 ## Comando para ejecutar spiders
 
